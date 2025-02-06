@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MvcUnitTesting_dotnet8.Models;
+using Tracker.WebAPIClient;
 
 namespace MvcUnitTesting_dotnet8
 {
@@ -7,6 +8,8 @@ namespace MvcUnitTesting_dotnet8
     {
         public static void Main(string[] args)
         {
+            ActivityAPIClient.Track(StudentID: "S00239846", StudentName: "Petra Poláková", activityName: "Rad302 2025 Week 3 Lab 3", Task: " Running Week 3 App");
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
